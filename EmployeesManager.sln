@@ -5,6 +5,11 @@ VisualStudioVersion = 15.0.28010.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "EmployeesManager", "EmployeesManager\EmployeesManager.vbproj", "{D30BF389-599B-4761-AC8E-6D709193D76C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2D55B756-99D5-4EC4-AC34-781D9F7966C1}"
+	ProjectSection(SolutionItems) = preProject
+		CreateEmployeesDatabaseTables.sql = CreateEmployeesDatabaseTables.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
