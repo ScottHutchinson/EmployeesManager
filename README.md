@@ -14,7 +14,7 @@ Consider replacing the basic INotifyPropertyChanged implementation with use of t
 
 Complete implementation of the MVVM design pattern by separating the Model and ViewModel code into separate projects.
 
-##RESOURCES
+## RESOURCES
 
 https://docs.microsoft.com/en-us/visualstudio/data-tools/create-a-sql-database-by-using-a-designer?view=vs-2017
 
