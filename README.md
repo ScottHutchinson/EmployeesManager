@@ -27,3 +27,5 @@ https://github.com/gardnerbp/WinFormsRXUI
 https://social.msdn.microsoft.com/Forums/sqlserver/en-US/b7d513d0-c850-40ee-ad8b-cf329de08486/how-to-convert-observablelistsource-class-from-c-to-vbnet?forum=adodotnetentityframework
 
 http://converter.telerik.com/
+
+[Programming Reactive Extensions and LINQ by Jesse Liberty and Paul Betts](https://www.apress.com/us/book/9781430237471)
