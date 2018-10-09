@@ -14,7 +14,7 @@ Consider replacing the basic INotifyPropertyChanged implementation with use of t
 
 Complete implementation of the MVVM design pattern by separating the Model and ViewModel code into separate projects.
 
-##RESOURCES
+## RESOURCES
 
 https://docs.microsoft.com/en-us/visualstudio/data-tools/create-a-sql-database-by-using-a-designer?view=vs-2017
 
@@ -27,3 +27,7 @@ https://github.com/gardnerbp/WinFormsRXUI
 https://social.msdn.microsoft.com/Forums/sqlserver/en-US/b7d513d0-c850-40ee-ad8b-cf329de08486/how-to-convert-observablelistsource-class-from-c-to-vbnet?forum=adodotnetentityframework
 
 http://converter.telerik.com/
+
+[Programming Reactive Extensions and LINQ by Jesse Liberty and Paul Betts](https://www.apress.com/us/book/9781430237471)
+
+[Xamarin Show Episode 5: MVVM & Data Binding with Xamarin.Forms](https://www.youtube.com/watch?v=GZDQptTQZsk&t=0s&list=PLcd1QuTDnY-eMgMLLhoCX8KDEdrNLOL6T&index=54)
