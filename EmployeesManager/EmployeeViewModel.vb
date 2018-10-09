@@ -1,4 +1,5 @@
 ﻿Imports System.ComponentModel
+Imports System.Runtime.CompilerServices
 
 Public Class EmployeeViewModel
     Implements INotifyPropertyChanged
@@ -23,7 +24,7 @@ Public Class EmployeeViewModel
         End Get
         Set(value As String)
             _Model.Name = value
-            Me.NotifyPropertyChanged("Name")
+            Me.NotifyPropertyChanged()
         End Set
     End Property
 
@@ -33,7 +34,7 @@ Public Class EmployeeViewModel
         End Get
         Set(value As String)
             _Model.Title = value
-            Me.NotifyPropertyChanged("Title")
+            Me.NotifyPropertyChanged()
         End Set
     End Property
 
@@ -43,7 +44,7 @@ Public Class EmployeeViewModel
         End Get
         Set(value As Integer?)
             _Model.Manager = value
-            Me.NotifyPropertyChanged("Manager")
+            Me.NotifyPropertyChanged()
         End Set
     End Property
 
@@ -53,7 +54,7 @@ Public Class EmployeeViewModel
         End Get
         Set(value As Date?)
             _Model.HireDate = value
-            Me.NotifyPropertyChanged("HireDate")
+            Me.NotifyPropertyChanged()
         End Set
     End Property
 
@@ -63,7 +64,7 @@ Public Class EmployeeViewModel
         End Get
         Set(value As Decimal?)
             _Model.Salary = value
-            Me.NotifyPropertyChanged("Salary")
+            Me.NotifyPropertyChanged()
         End Set
     End Property
 
@@ -73,14 +74,14 @@ Public Class EmployeeViewModel
         End Get
         Set(value As Integer?)
             _Model.DepartmentId = value
-            Me.NotifyPropertyChanged("DepartmentId")
+            Me.NotifyPropertyChanged()
         End Set
     End Property
 
     Public Event PropertyChanged As PropertyChangedEventHandler Implements INotifyPropertyChanged.PropertyChanged
 
-    Private Sub NotifyPropertyChanged(ByVal info As String)
-        RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(info))
+    Private Sub NotifyPropertyChanged(<CallerMemberName> Optional ByVal propertyName As String = "")
+        RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
     End Sub
 
     Public Property SaveChanges As Boolean
