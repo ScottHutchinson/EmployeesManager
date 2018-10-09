@@ -5,7 +5,7 @@ Partial Public Class EmployeesForm
     Inherits Form
 
     Private _context As EmployeesDatabaseEntities
-    Private _empViewModel As EmployeeViewModel
+    Private WithEvents _empViewModel As EmployeeViewModel
 
     Public Sub New()
         InitializeComponent()
@@ -24,6 +24,7 @@ Partial Public Class EmployeesForm
             .AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells
             .AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells
         End With
+        'Me.DepartmentBindingNavigatorSaveItem.Enabled = False
     End Sub
 
     Private Sub SaveChanges()
@@ -38,6 +39,8 @@ Partial Public Class EmployeesForm
         Me._context.SaveChanges()
         Me.DepartmentDataGridView.Refresh()
         Me.EmployeesDataGridView.Refresh()
+        _empViewModel.EndEdit()
+        'Me.DepartmentBindingNavigatorSaveItem.Enabled = False
     End Sub
 
     Private Sub DepartmentBindingNavigatorSaveItem_Click(sender As Object, e As EventArgs) Handles DepartmentBindingNavigatorSaveItem.Click

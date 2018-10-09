@@ -53,63 +53,70 @@ Partial Class EmployeeDetailsForm
         'IdLabel
         '
         IdLabel.AutoSize = True
-        IdLabel.Location = New System.Drawing.Point(35, 40)
+        IdLabel.Location = New System.Drawing.Point(23, 26)
+        IdLabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         IdLabel.Name = "IdLabel"
-        IdLabel.Size = New System.Drawing.Size(27, 20)
+        IdLabel.Size = New System.Drawing.Size(19, 13)
         IdLabel.TabIndex = 1
         IdLabel.Text = "Id:"
         '
         'NameLabel
         '
         NameLabel.AutoSize = True
-        NameLabel.Location = New System.Drawing.Point(35, 72)
+        NameLabel.Location = New System.Drawing.Point(23, 47)
+        NameLabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         NameLabel.Name = "NameLabel"
-        NameLabel.Size = New System.Drawing.Size(55, 20)
+        NameLabel.Size = New System.Drawing.Size(38, 13)
         NameLabel.TabIndex = 3
         NameLabel.Text = "Name:"
         '
         'TitleLabel
         '
         TitleLabel.AutoSize = True
-        TitleLabel.Location = New System.Drawing.Point(35, 104)
+        TitleLabel.Location = New System.Drawing.Point(23, 68)
+        TitleLabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         TitleLabel.Name = "TitleLabel"
-        TitleLabel.Size = New System.Drawing.Size(42, 20)
+        TitleLabel.Size = New System.Drawing.Size(30, 13)
         TitleLabel.TabIndex = 5
         TitleLabel.Text = "Title:"
         '
         'ManagerLabel
         '
         ManagerLabel.AutoSize = True
-        ManagerLabel.Location = New System.Drawing.Point(35, 136)
+        ManagerLabel.Location = New System.Drawing.Point(23, 88)
+        ManagerLabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         ManagerLabel.Name = "ManagerLabel"
-        ManagerLabel.Size = New System.Drawing.Size(76, 20)
+        ManagerLabel.Size = New System.Drawing.Size(52, 13)
         ManagerLabel.TabIndex = 7
         ManagerLabel.Text = "Manager:"
         '
         'HireDateLabel
         '
         HireDateLabel.AutoSize = True
-        HireDateLabel.Location = New System.Drawing.Point(35, 169)
+        HireDateLabel.Location = New System.Drawing.Point(23, 110)
+        HireDateLabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         HireDateLabel.Name = "HireDateLabel"
-        HireDateLabel.Size = New System.Drawing.Size(81, 20)
+        HireDateLabel.Size = New System.Drawing.Size(55, 13)
         HireDateLabel.TabIndex = 9
         HireDateLabel.Text = "Hire Date:"
         '
         'SalaryLabel
         '
         SalaryLabel.AutoSize = True
-        SalaryLabel.Location = New System.Drawing.Point(35, 200)
+        SalaryLabel.Location = New System.Drawing.Point(23, 130)
+        SalaryLabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         SalaryLabel.Name = "SalaryLabel"
-        SalaryLabel.Size = New System.Drawing.Size(57, 20)
+        SalaryLabel.Size = New System.Drawing.Size(39, 13)
         SalaryLabel.TabIndex = 11
         SalaryLabel.Text = "Salary:"
         '
         'DepartmentIdLabel
         '
         DepartmentIdLabel.AutoSize = True
-        DepartmentIdLabel.Location = New System.Drawing.Point(35, 232)
+        DepartmentIdLabel.Location = New System.Drawing.Point(23, 151)
+        DepartmentIdLabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         DepartmentIdLabel.Name = "DepartmentIdLabel"
-        DepartmentIdLabel.Size = New System.Drawing.Size(116, 20)
+        DepartmentIdLabel.Size = New System.Drawing.Size(77, 13)
         DepartmentIdLabel.TabIndex = 13
         DepartmentIdLabel.Text = "Department Id:"
         '
@@ -120,65 +127,73 @@ Partial Class EmployeeDetailsForm
         'IdTextBox
         '
         Me.IdTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EmployeesBindingSource, "Id", True))
-        Me.IdTextBox.Location = New System.Drawing.Point(157, 37)
+        Me.IdTextBox.Location = New System.Drawing.Point(105, 24)
+        Me.IdTextBox.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.IdTextBox.Name = "IdTextBox"
-        Me.IdTextBox.Size = New System.Drawing.Size(200, 26)
+        Me.IdTextBox.Size = New System.Drawing.Size(135, 20)
         Me.IdTextBox.TabIndex = 2
         '
         'NameTextBox
         '
         Me.NameTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EmployeesBindingSource, "Name", True))
-        Me.NameTextBox.Location = New System.Drawing.Point(157, 69)
+        Me.NameTextBox.Location = New System.Drawing.Point(105, 45)
+        Me.NameTextBox.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.NameTextBox.Name = "NameTextBox"
-        Me.NameTextBox.Size = New System.Drawing.Size(200, 26)
+        Me.NameTextBox.Size = New System.Drawing.Size(135, 20)
         Me.NameTextBox.TabIndex = 4
         '
         'TitleTextBox
         '
         Me.TitleTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EmployeesBindingSource, "Title", True))
-        Me.TitleTextBox.Location = New System.Drawing.Point(157, 101)
+        Me.TitleTextBox.Location = New System.Drawing.Point(105, 66)
+        Me.TitleTextBox.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TitleTextBox.Name = "TitleTextBox"
-        Me.TitleTextBox.Size = New System.Drawing.Size(200, 26)
+        Me.TitleTextBox.Size = New System.Drawing.Size(135, 20)
         Me.TitleTextBox.TabIndex = 6
         '
         'ManagerTextBox
         '
         Me.ManagerTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EmployeesBindingSource, "Manager", True))
-        Me.ManagerTextBox.Location = New System.Drawing.Point(157, 133)
+        Me.ManagerTextBox.Location = New System.Drawing.Point(105, 86)
+        Me.ManagerTextBox.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.ManagerTextBox.Name = "ManagerTextBox"
-        Me.ManagerTextBox.Size = New System.Drawing.Size(200, 26)
+        Me.ManagerTextBox.Size = New System.Drawing.Size(135, 20)
         Me.ManagerTextBox.TabIndex = 8
         '
         'HireDateDateTimePicker
         '
         Me.HireDateDateTimePicker.DataBindings.Add(New System.Windows.Forms.Binding("Value", Me.EmployeesBindingSource, "HireDate", True))
-        Me.HireDateDateTimePicker.Location = New System.Drawing.Point(157, 165)
+        Me.HireDateDateTimePicker.Location = New System.Drawing.Point(105, 107)
+        Me.HireDateDateTimePicker.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.HireDateDateTimePicker.Name = "HireDateDateTimePicker"
-        Me.HireDateDateTimePicker.Size = New System.Drawing.Size(200, 26)
+        Me.HireDateDateTimePicker.Size = New System.Drawing.Size(135, 20)
         Me.HireDateDateTimePicker.TabIndex = 10
         '
         'SalaryTextBox
         '
         Me.SalaryTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EmployeesBindingSource, "Salary", True))
-        Me.SalaryTextBox.Location = New System.Drawing.Point(157, 197)
+        Me.SalaryTextBox.Location = New System.Drawing.Point(105, 128)
+        Me.SalaryTextBox.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.SalaryTextBox.Name = "SalaryTextBox"
-        Me.SalaryTextBox.Size = New System.Drawing.Size(200, 26)
+        Me.SalaryTextBox.Size = New System.Drawing.Size(135, 20)
         Me.SalaryTextBox.TabIndex = 12
         '
         'DepartmentIdTextBox
         '
         Me.DepartmentIdTextBox.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.EmployeesBindingSource, "DepartmentId", True))
-        Me.DepartmentIdTextBox.Location = New System.Drawing.Point(157, 229)
+        Me.DepartmentIdTextBox.Location = New System.Drawing.Point(105, 149)
+        Me.DepartmentIdTextBox.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.DepartmentIdTextBox.Name = "DepartmentIdTextBox"
-        Me.DepartmentIdTextBox.Size = New System.Drawing.Size(200, 26)
+        Me.DepartmentIdTextBox.Size = New System.Drawing.Size(135, 20)
         Me.DepartmentIdTextBox.TabIndex = 14
         '
         'OkButton
         '
         Me.OkButton.DialogResult = System.Windows.Forms.DialogResult.OK
-        Me.OkButton.Location = New System.Drawing.Point(602, 275)
+        Me.OkButton.Location = New System.Drawing.Point(401, 179)
+        Me.OkButton.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.OkButton.Name = "OkButton"
-        Me.OkButton.Size = New System.Drawing.Size(75, 33)
+        Me.OkButton.Size = New System.Drawing.Size(50, 21)
         Me.OkButton.TabIndex = 15
         Me.OkButton.Text = "Save"
         Me.OkButton.UseVisualStyleBackColor = True
@@ -186,18 +201,19 @@ Partial Class EmployeeDetailsForm
         'CancelBtn
         '
         Me.CancelBtn.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.CancelBtn.Location = New System.Drawing.Point(699, 275)
+        Me.CancelBtn.Location = New System.Drawing.Point(466, 179)
+        Me.CancelBtn.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.CancelBtn.Name = "CancelBtn"
-        Me.CancelBtn.Size = New System.Drawing.Size(75, 33)
+        Me.CancelBtn.Size = New System.Drawing.Size(50, 21)
         Me.CancelBtn.TabIndex = 15
         Me.CancelBtn.Text = "Cancel"
         Me.CancelBtn.UseVisualStyleBackColor = True
         '
         'EmployeeDetailsForm
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 337)
+        Me.ClientSize = New System.Drawing.Size(533, 219)
         Me.Controls.Add(Me.CancelBtn)
         Me.Controls.Add(Me.OkButton)
         Me.Controls.Add(IdLabel)
@@ -214,6 +230,7 @@ Partial Class EmployeeDetailsForm
         Me.Controls.Add(Me.SalaryTextBox)
         Me.Controls.Add(DepartmentIdLabel)
         Me.Controls.Add(Me.DepartmentIdTextBox)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "EmployeeDetailsForm"
         Me.Text = "Edit Employee Details"
         CType(Me.EmployeesBindingSource, System.ComponentModel.ISupportInitialize).EndInit()

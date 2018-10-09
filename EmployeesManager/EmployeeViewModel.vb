@@ -1,10 +1,15 @@
 ﻿Imports System.ComponentModel
+Imports System.Reflection
 Imports System.Runtime.CompilerServices
 
 Public Class EmployeeViewModel
     Implements INotifyPropertyChanged
+    Implements IEditableObject
 
     Private _Model As Employee
+    Dim _ModelProperties As PropertyInfo()
+    Private _Copy As Hashtable
+
     Private _SaveChanges As Boolean
 
     Public Sub New(ByRef employee As Employee)
@@ -82,6 +87,31 @@ Public Class EmployeeViewModel
 
     Private Sub NotifyPropertyChanged(<CallerMemberName> Optional ByVal propertyName As String = "")
         RaiseEvent PropertyChanged(Me, New PropertyChangedEventArgs(propertyName))
+    End Sub
+
+    Public Sub BeginEdit() Implements IEditableObject.BeginEdit
+        _ModelProperties = _Model.GetType().GetProperties(Reflection.BindingFlags.Public Or Reflection.BindingFlags.Instance)
+        _Copy = New Hashtable(_ModelProperties.Length - 1)
+        For Each prop In _ModelProperties
+            If prop.GetSetMethod() IsNot Nothing Then
+                Dim val = prop.GetValue(_Model)
+                _Copy.Add(prop.Name, val)
+            End If
+        Next
+    End Sub
+
+    Public Sub EndEdit() Implements IEditableObject.EndEdit
+        _Copy = Nothing
+    End Sub
+
+    Public Sub CancelEdit() Implements IEditableObject.CancelEdit
+        If _Copy Is Nothing Then Return
+        For Each prop In _ModelProperties
+            If prop.GetSetMethod() IsNot Nothing Then
+                Dim val = _Copy(prop.Name)
+                prop.SetValue(_Model, val)
+            End If
+        Next
     End Sub
 
     Public Property SaveChanges As Boolean
