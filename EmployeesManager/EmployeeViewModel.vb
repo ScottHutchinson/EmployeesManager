@@ -123,4 +123,7 @@ Public Class EmployeeViewModel
         End Set
     End Property
 
+    Public Sub Update()
+        EmployeeRepository.SaveChanges(Me)
+    End Sub
 End Class

@@ -36,7 +36,9 @@ Partial Public Class EmployeesForm
             End If
         Next
 
-        Me._context.SaveChanges()
+        'Me._context.SaveChanges()
+        ' This is just practice using ADO.NET without Entity Framework.
+        _empViewModel.Update()
         Me.DepartmentDataGridView.Refresh()
         Me.EmployeesDataGridView.Refresh()
         _empViewModel.EndEdit()
@@ -53,13 +55,15 @@ Partial Public Class EmployeesForm
     End Sub
 
     Private Sub OnCellMouseClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles EmployeesDataGridView.CellMouseClick
-        Dim employee As Employee = DirectCast(EmployeesDataGridView.Rows(e.RowIndex).DataBoundItem, Employee)
-        If employee IsNot Nothing Then
-            _empViewModel = New EmployeeViewModel(employee)
-            Dim empDetailsForm As New EmployeeDetailsForm(_empViewModel)
-            empDetailsForm.ShowDialog(Me)
-            If _empViewModel.SaveChanges Then
-                Me.SaveChanges()
+        If e.RowIndex >= 0 Then
+            Dim employee As Employee = DirectCast(EmployeesDataGridView.Rows(e.RowIndex).DataBoundItem, Employee)
+            If employee IsNot Nothing Then
+                _empViewModel = New EmployeeViewModel(employee)
+                Dim empDetailsForm As New EmployeeDetailsForm(_empViewModel)
+                empDetailsForm.ShowDialog(Me)
+                If _empViewModel.SaveChanges Then
+                    Me.SaveChanges()
+                End If
             End If
         End If
     End Sub

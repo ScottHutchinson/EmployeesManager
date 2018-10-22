@@ -7,6 +7,9 @@
 ' </auto-generated>
 '------------------------------------------------------------------------------
 
+Imports System
+Imports System.Collections.Generic
+
 Partial Public Class Department
     Public Property Id As Integer
     Public Property Name As String
